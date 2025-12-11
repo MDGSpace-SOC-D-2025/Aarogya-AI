@@ -1,1 +1,1 @@
-# Aarogya AI
+# Arvia
