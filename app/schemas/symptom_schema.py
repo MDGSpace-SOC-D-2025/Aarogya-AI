@@ -9,3 +9,4 @@ class SymptomResponse(BaseModel):
     recommended_doctor: str
     self_care_tips: list[str]
     disclaimer: str
+
