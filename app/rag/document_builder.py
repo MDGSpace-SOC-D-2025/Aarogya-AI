@@ -1,3 +1,4 @@
+# preparing the knowledge base documents
 from langchain_core.documents import Document
 from app.data.symptom_data import SYMPTOM_DB
 
@@ -14,7 +15,7 @@ def build_documents():
 
         doc = Document(
             page_content=text,
-            metadata={
+            metadata={ #(not embedded, attached info)
                 "symptom": symptom,
                 "doctor": info["doctor"]
             }
