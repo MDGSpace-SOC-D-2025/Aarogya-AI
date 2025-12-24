@@ -7,6 +7,13 @@ class SymptomRequest(BaseModel):
 class SymptomResponse(BaseModel):
     answer: str
     disclaimer: str
-    original_query: Optional[str] = None      # What user typed   Optional, can be None
-    refined_query: Optional[str] = None       # What Agent-1 extracted
-    needs_clarification: Optional[bool] = False  # If query was too vague
+    
+    # Agent-1 metadata
+    original_query: Optional[str] = None   #optional: may not be present so can be None
+    refined_query: Optional[str] = None
+    needs_clarification: Optional[bool] = False
+    
+    # Agent-2 metadata (new fields)
+    severity: Optional[str] = None
+    severity_reasoning: Optional[str] = None   #for transparency
+    needs_doctor: Optional[bool] = False
